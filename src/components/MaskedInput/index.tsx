@@ -6,15 +6,11 @@ import React, {
 } from 'react';
 
 import { useField } from '@unform/core';
-import { Props } from 'react-input-mask';
+import { Props, InputState } from 'react-input-mask';
 import { Container, Input } from './styles';
 
 interface InputProps extends Props{
   name: string;
-}
-
-interface InputValueReference {
-  value: string;
 }
 
 const MaskedInput:React.FC<InputProps> = ({ name, ...rest }) => {
@@ -24,25 +20,19 @@ const MaskedInput:React.FC<InputProps> = ({ name, ...rest }) => {
   const {
     fieldName,
     registerField,
-    defaultValue = '',
+    defaultValue,
     clearError,
     error,
   } = useField(name);
-
-  const inputValueRef = useRef<InputValueReference>({ value: defaultValue });
 
   const inputElementRef = useRef<any>(null);
 
   useEffect(() => {
     registerField<string>({
       name: fieldName,
-      ref: inputValueRef.current,
+      ref: inputElementRef.current,
       path: 'value',
       setValue(ref: any, value) {
-        // inputValueRef.current.value = value;
-        // inputElementRef.current.setNativeProps({
-        //   text: value,
-        // });
         ref.setInputValue(value);
       },
       clearValue(ref: any) {
@@ -58,7 +48,7 @@ const MaskedInput:React.FC<InputProps> = ({ name, ...rest }) => {
   const handleInputBlur = useCallback(() => {
     setIsFocused(false);
 
-    setIsFilled(!!inputValueRef.current?.value);
+    setIsFilled(!!inputElementRef.current?.value);
   }, []);
 
   return (
