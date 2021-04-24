@@ -68,7 +68,7 @@ const NewTransactionModal: React.FC<NewTransactionModalProps> = ({ isOpen, onReq
             />
           </Column>
           <Column>
-            <MaskedInput name="cpf" mask="999.999.999-99" />
+            <MaskedInput name="cpf" mask="999.999.999-99" placeholder="___.___.___-__" />
             <Input name="city" placeholder="City" />
             <Input name="state" placeholder="State" />
           </Column>
