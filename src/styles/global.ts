@@ -45,7 +45,7 @@ export const GlobalSyle = createGlobalStyle`
     border: 0;
   }
 
-  body, input, button{
+  body, input, button, select, option{
     font-family: 'Roboto Slab', serif;
     font-weight: 400;
     font-size: 1.4rem;
