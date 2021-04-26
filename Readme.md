@@ -43,7 +43,7 @@
 
 As Soon as possible I will put informations about the project
 
-To see the **api**, click here: [GoBarber Rest API](https://github.com/Guribeiro/softwrap-api)</br>
+To see the **api**, click here: [Softwrap Rest API](https://github.com/Guribeiro/softwrap-api)</br>
 
 ## [🌌 See the prototype made with figma](https://www.figma.com/file/oxmKlX2Q6VjgJBlXjyVI8J/Softwrap-challenge?node-id=0%3A1)
 
