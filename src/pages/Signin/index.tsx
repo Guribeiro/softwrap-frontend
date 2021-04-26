@@ -1,7 +1,14 @@
-import React, { useCallback } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useCallback, useRef } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 import { FiMail, FiLock } from 'react-icons/fi';
-// import { Form } from '@unform/web';
+
+import * as Yup from 'yup';
+
+import { FormHandles } from '@unform/core';
+
+import { useAuth } from '../../hooks/auth';
+
+import getValidationErros from '../../utils/getValidationError';
 import { Container, Image, Form } from './styles';
 
 import softwrapLogo from '../../assets/softwrap.png';
@@ -16,14 +23,51 @@ interface SignInFormData {
 }
 
 const Signin: React.FC = () => {
-  const handleSubmit = useCallback((data: SignInFormData) => {
-    console.log(data);
-  }, []);
+  const formRef = useRef<FormHandles>(null);
+
+  const { signIn } = useAuth();
+
+  const history = useHistory();
+
+  const handleSubmit = useCallback(
+    async ({ email, password }: SignInFormData) => {
+      try {
+        formRef.current?.setErrors({});
+        const schema = Yup.object().shape({
+          email: Yup.string()
+            .required('Email obrigatório')
+            .email('Digite um email válido'),
+          password: Yup.string().min(6, 'Mínimo de 06 caracteres'),
+        });
+
+        await schema.validate({
+          email,
+          password,
+        }, {
+          abortEarly: false,
+        });
+
+        await signIn({
+          email,
+          password,
+        });
+
+        history.push('/dashboard');
+      } catch (err) {
+        console.log(err.message);
+        if (err instanceof Yup.ValidationError) {
+          const erros = getValidationErros(err);
+          formRef.current?.setErrors(erros);
+        }
+      }
+    },
+    [signIn, history],
+  );
 
   return (
     <Container>
       <Logo />
-      <Form onSubmit={handleSubmit}>
+      <Form ref={formRef} onSubmit={handleSubmit}>
         <h1>Sign in</h1>
         <Input icon={FiMail} name="email" placeholder="Email" type="email" />
         <Input icon={FiLock} name="password" placeholder="Password" type="password" />
