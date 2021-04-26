@@ -11,15 +11,16 @@ export const Content = styled.div`
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
-    padding: 2.5rem 0 5rem;
+    padding: 2.5rem 0;
 
     img{
       width: 20rem;
       height: 5.5rem;
     }
 
-    button{
-        font-weight: 600;
+   section{
+    > button{
+        font-weight: 500;
         color: ${colors.white};
         background-color: ${colors.button};
         padding: 1.4rem 3rem;
@@ -31,4 +32,20 @@ export const Content = styled.div`
             filter: brightness(0.9);
         }
     }
+   }
+`;
+
+export const SignOutButton = styled.button`
+  margin-left: 6rem;
+  font-weight: 500;
+  color: ${colors.white};
+  background-color: ${colors.signout_button};
+  padding: 1.4rem 2rem;
+  border: 0;
+  border-radius: 5px;
+  transition: filter 0.2s;
+
+  &:hover{
+      filter: brightness(0.9);
+  }
 `;
