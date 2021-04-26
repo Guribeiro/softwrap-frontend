@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img alt="Logo" src="src/assets/softwrap.png">
+  <img alt="Softwarp Logo" src="src/assets/softwrap.png">
 </h1>
 
 <h3 align="center">
