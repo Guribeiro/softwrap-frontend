@@ -6,7 +6,7 @@ import React, {
 } from 'react';
 
 import { useField } from '@unform/core';
-import { Props, InputState } from 'react-input-mask';
+import { Props } from 'react-input-mask';
 import { Container, Input } from './styles';
 
 interface InputProps extends Props{
