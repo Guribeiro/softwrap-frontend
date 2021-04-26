@@ -1,52 +1,102 @@
-<div>
-  <h1 align="center">Softwrap - Challenge</h1>
-  <div align="center">
-    <img src="https://img.shields.io/github/issues/Guribeiro/softwrap-challenge?color=%230c0c0c&style=flat-square"/>
-    <img src="https://img.shields.io/github/issues/Guribeiro/softwrap-challenge?color=%230c0c0c&style=flat-square" />
-  </div>
-</div>
+<h1 align="center">
+  <img alt="Logo" src="src/assets/softwrap.png">
+</h1>
 
-<div align="center">
-  <h4>
-    🚧  Party 🚀 Working in Progress...  🚧
-  </h4>
+<h3 align="center">
+  ReactJS Application for Softwrap challenge project
+</h3>
 
-  <a href="https://www.notion.so/Party-8c62187a99884d13afbf3db583ec0eb7">See the Docs</a>
-</div>
+<p align="center">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/Guribeiro/softwrap-frontend?color=00B7F8">
 
-<!---
+ <a href="https://www.linkedin.com/in/gustavohribeiro/" target="_blank" rel="noopener noreferrer">
+    <img alt="Made by" src="https://img.shields.io/badge/made%20by-Gustavo%20Henrique-00B7F8">
+  </a>
 
+   <img alt="Repository size" src="https://img.shields.io/github/repo-size/Guribeiro/softwrap-frontend?color=00B7F8">
 
-### 🛠 Technologies
-- [Expo](https://expo.io/)
-- [React](https://pt-br.reactjs.org/)
-- [React Native](https://reactnative.dev/)
+   <a href="https://github.com/Guribeiro/softwrap-api/commits">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Guribeiro/softwrap-frontend?color=00B7F8">
+  </a>
+
+ <a href="https://github.com/Guribeiro/softwrap-api/stargazers">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/stars/Guribeiro/softwrap-frontend?color=00B7F8">
+  </a>
+
+  <img alt="GitHub" src="https://img.shields.io/github/license/Guribeiro/softwrap-frontend?color=00B7F8">
+</p>
+
+<p align="center">
+  <a href="#%EF%B8%8F-about-the-project">About the project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-getting-started">Getting started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-license">License</a>
+</p>
+
+</br>
+
+<!-- <p align="center">
+  <img alt="Layout" src="https://res.cloudinary.com/eliasgcf/image/upload/v1588811213/GoBarber/Kapture_2020-05-06_at_21.25.26_tijnl5.gif">
+</p> -->
+
+## 💇🏻‍♂️ About the project
+
+As Soon as possible I will put informations about the project
+
+To see the **api**, click here: [GoBarber Rest API](https://github.com/Guribeiro/softwrap-api)</br>
+
+## [🌌 See the prototype made with figma](https://www.figma.com/file/oxmKlX2Q6VjgJBlXjyVI8J/Softwrap-challenge?node-id=0%3A1)
+
+## 🚀 Technologies
+
+Technologies that I used to develop this web client
+
+- [ReactJS](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
-- [Styled-Components](https://styled-components.com/)
-- [Styled-Components](https://styled-components.com/)
+- [React Router DOM](https://reacttraining.com/react-router/)
+- [React Icons](https://react-icons.netlify.com/#/)
+- [React Spring](https://react-spring.io/)
+- [React Input Mask](https://github.com/sanniassin/react-input-mask)
+- [React Modal](https://github.com/reactjs/react-modal)
+- [Yup](https://github.com/jquense/yup)
+- [Unform](https://unform.dev/)
+- [Yup](https://github.com/jquense/yup)
+- [Styled Components](https://styled-components.com/)
+- [Polished](https://github.com/styled-components/polished)
+- [Axios](https://github.com/axios/axios)
+- [Eslint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
+- [EditorConfig](https://editorconfig.org/)
 
-## Installation
+## 💻 Getting started
 
-```sh
-npm install
+### Requirements
+
+- Have this application's [API](https://github.com/Guribeiro/softwrap-api) running
+
+**Clone the project and access the folder**
+
+```bash
+$ git clone git@github.com:Guribeiro/softwrap-frontend.git && cd softwrap-frontend
 ```
 
-using yarn:
+**Follow the steps below**
 
-```sh
-yarn install
+```bash
+# Install the dependencies
+$ yarn
+
+# Be sure the file 'src/services/api.ts' have the IP to your API
+
+# Start the client
+$ yarn start
 ```
 
-## How to contribute
-1. Fork the project.
-2. Create a new branch with your changes: `git checkout -b my-feature`
-3. Save your changes and create a commit message telling you what you did: `git commit -m" feature: My new feature "`
-4. Submit your changes: `git push origin my-feature`
+## 📝 License
 
---->
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-<div align="center">
-  <h2>License</h2>
+---
 
-Distributed under the MIT License. See `LICENSE` for more information.
-</div>
+Made with 💜 &nbsp;by Gustavo Henrique 👋 &nbsp;[See my linkedin](https://www.linkedin.com/in/gustavohribeiro/)
+
