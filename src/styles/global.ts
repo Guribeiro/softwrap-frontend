@@ -6,8 +6,10 @@ export const colors = {
   placeholder: '#285383',
   input: '#285383',
   button: '#00B7F8',
+  signout_button: '#d63031',
   white: '#FFFFFF',
   stroke: '#BABABA',
+  container: '#F6F6F6',
 
 };
 
